@@ -1,0 +1,3 @@
+#littleGiantManagersSystem
+
+此系统用于管理little_giant商城的商品，以及其他购物车。
