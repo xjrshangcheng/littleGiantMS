@@ -5,22 +5,19 @@
 }
 .right-content {
     width: 99%;
-    overflow: hidden;
-    float: left;
     padding-top: 10px;
     font-size: 12px;
 }
 #show-back-stage-down {
     position: relative;
 }
-.information1 {
-    width: 99.9%;
+.information {
     overflow: hidden;
-    /*background: #f9f9f9;*/
+    background: #f9f9f9;
     margin-top: 10px;
     padding: 10px 0;
     margin-bottom: 10px;
-    border-bottom: 1px dashed #ddd;
+    border-bottom: 1px dashed #EB7;
 }
 .add-goods {
     width: 97%;
@@ -47,6 +44,18 @@
     text-indent: 12px;
     color: #404040;
     margin-bottom: 5px;
+}
+.add-goods-name select{
+    min-width: 100px;
+}
+.add-goods-sort .input-style4 {
+    float: left;
+    margin-left: 10px;
+    margin: 0px 20px 10px 18px;
+    display: none;
+}
+.add-goods-sort .sort-input2{
+    text-indent: 24px;
 }
 em, i {
     font-style: normal;
@@ -90,14 +99,6 @@ select {
     color: #333;
     vertical-align: middle;
 }
-.add-goods {
-    width: 97%;
-    overflow: hidden;
-    margin: 0 auto;
-    border-bottom: 1px solid #e0e0e0;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
 .add-goods-sort {
     width: 97%;
     overflow: hidden;
@@ -107,7 +108,7 @@ select {
 .add-goods-table {
     width: 865px;
     overflow: hidden;
-    padding-left: 10px;
+    padding-left: 5px;
     margin-top: 0px;
     color: #666;
 }
@@ -134,11 +135,7 @@ select {
 li {
     list-style: none;
 }
-.add-goods-photo-img {
-    width: 100px;
-    height: 100px;
-}
-.add-goods-photo-img img {
+.add-goods-photo-img , .add-goods-photo-img img{
     width: 100px;
     height: 100px;
 }
@@ -148,30 +145,24 @@ li {
     margin-top: 5px;
     cursor: pointer;
 }
-.input-style4 {
-    margin: 0px auto;
-    width: 80px;
-    height: 25px;
-    border: 0;
+.input-style4{
+    width: 46px;
     line-height: 25px;
     text-align: center;
     background: #393e4c;
     border-radius: 4px;
-    box-shadow: none;
     color: #fff;
-    font-size: 12px;
     margin: 0 3px;
 }
 .input-style1 {
-    margin: 0 auto;
-    width: 80px;
-    height: 25px;
-    border: 0;
+    width: 46px;
     line-height: 25px;
     text-align: center;
-    background: #e2e2e2;
+    background: #ccc;
     border-radius: 3px;
-    box-shadow: none;
-    font-size: 12px;
-    color: #4a4a49;
+}
+#goods-confirm {
+    float: right;
+    margin-right: 536px;
+    margin-top: 11px;
 }
