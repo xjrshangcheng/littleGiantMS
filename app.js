@@ -22,7 +22,7 @@ app.use('/add',add);
 var goods_query = require('./routes/goods_query');
 app.use('/goods_query',goods_query);
 
-var server = app.listen(3000, function() {
+var server = app.listen(8080, function() {
 
     var host = server.address().address;
     var port = server.address().port;
