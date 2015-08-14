@@ -1,22 +1,17 @@
 {
-  "name": "little_giant_m_s",
-  "version": "1.0.0",
-  "description": "此系统用于管理little_giant商城的商品，以及其他购物车的管理。",
-  "main": "index.js",
+  "name": "littleGiantMS",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xjrshangcheng/littleGiantMS.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/xjrshangcheng/littleGiantMS/issues"
-  },
-  "homepage": "https://github.com/xjrshangcheng/littleGiantMS#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
   }
 }
