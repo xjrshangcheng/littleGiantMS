@@ -5,15 +5,12 @@
     <title>add goods</title>
     <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css" >
     <link rel="stylesheet" href="./stylesheets/add.css">
-    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
-    <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"> </script>
 </head>
 <body>
     <div class="container">
         <div class="right-content">
             <div id="show-back-stage-down">
-                <div class="information1">
+                <div class="information">
                     <div class="add-goods">
                         <p>商品信息</p>
                     </div>
@@ -42,15 +39,15 @@
                         </div>
                         <div class="add-goods-name-a" id="goods-main-class">
                             <em><span class="goods-icon">*</span>所属分类：</em>
-                            <select style="min-width:100px;" id="store-nav-class1">
+                            <select id="store-nav-class1">
                                 <option value="-1">一级类</option>
-                                <option index="0" value="209885" text="家电">家电</option>
-                                <option index="1" value="209923" text="水电费">水电费</option>
+                                <option value="209885" text="家电">家电</option>
+                                <option value="209923" text="水电费">水电费</option>
                             </select>
-                            <select style="min-width:100px;" id="store-nav-class2">
+                            <select id="store-nav-class2">
                                 <option value="-1">二级类</option>
                             </select>
-                            <select style="min-width:100px;" id="store-nav-class3">
+                            <select id="store-nav-class3">
                                 <option value="-1">三级类</option>
                             </select>
                         </div>
@@ -59,7 +56,7 @@
                         <p>商品属性,库存,价格</p>
                     </div>
                     <div class="add-goods-sort">
-                        <div class="input-style4" id="prop-class-edit" style="float: left; margin-left: 10px;display:none">添加</div>
+                        <div class="input-style4" id="prop-class-edit">添加</div>
                     </div>
                     <div class="add-goods-table" id="edit-prop-item-list">
                         <div class="add-goods-name not-import">
@@ -90,7 +87,7 @@
                         <p>商品图片</p>
                     </div>
                     <div class="add-goods-sort">
-                        <p class="sort-input2" style="text-indent: 24px;">(最多可上传5张)</p>
+                        <p class="sort-input2">(最多可上传5张)</p>
                     </div>
                     <ul class="add-goods-photo">
                         <li class="add-goods-photo-a" id="photo1">
@@ -99,11 +96,11 @@
                             </div>
                             <ul class="add-goods-photo-button">
                                 <li>
-                                    <div class="input-style4 photo-edit" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;">上传
+                                    <div class="input-style4 photo-edit" >上传
                                     </div>
                                 </li>
                                 <li class="button-float">
-                                    <div class="input-style1 photo-delete" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;background:#ccc;">删除
+                                    <div class="input-style1 photo-delete">删除
                                     </div>
                                 </li>
                             </ul>
@@ -114,11 +111,11 @@
                             </div>
                             <ul class="add-goods-photo-button">
                                 <li>
-                                    <div class="input-style4 photo-edit" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;">上传
+                                    <div class="input-style4 photo-edit">上传
                                     </div>
                                 </li>
                                 <li class="button-float">
-                                    <div class="input-style1 photo-delete" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;background:#ccc;">删除
+                                    <div class="input-style1 photo-delete">删除
                                     </div>
                                 </li>
                             </ul>
@@ -129,11 +126,11 @@
                             </div>
                             <ul class="add-goods-photo-button">
                                 <li>
-                                    <div class="input-style4 photo-edit" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;">上传
+                                    <div class="input-style4 photo-edit">上传
                                     </div>
                                 </li>
                                 <li class="button-float">
-                                    <div class="input-style1 photo-delete" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;background:#ccc;">删除
+                                    <div class="input-style1 photo-delete">删除
                                     </div>
                                 </li>
                             </ul>
@@ -144,11 +141,11 @@
                             </div>
                             <ul class="add-goods-photo-button">
                                 <li>
-                                    <div class="input-style4 photo-edit" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;">上传
+                                    <div class="input-style4 photo-edit">上传
                                     </div>
                                 </li>
                                 <li class="button-float">
-                                    <div class="input-style1 photo-delete" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;background:#ccc;">删除
+                                    <div class="input-style1 photo-delete">删除
                                     </div>
                                 </li>
                             </ul>
@@ -159,11 +156,11 @@
                             </div>
                             <ul class="add-goods-photo-button">
                                 <li>
-                                    <div class="input-style4 photo-edit" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;">上传
+                                    <div class="input-style4 photo-edit">上传
                                     </div>
                                 </li>
                                 <li class="button-float">
-                                    <div class="input-style1 photo-delete" photo_no="1" style="float: left;width:46px;height:25px;line-height:25px;font-size:12px;background:#ccc;">删除
+                                    <div class="input-style1 photo-delete">删除
                                     </div>
                                 </li>
                             </ul>
@@ -173,13 +170,17 @@
                         <p>商品描述</p>
                     </div>
                     <script id="editor" type="text/plain" style="width:1024px;height:500px;margin-left: 53px;"></script>
-                    <div class="input-style4" style="float: right;margin-right: 536px; margin-top: 11px;" id="edit-goods-confirm">确定</div>
+                    <div class="input-style4" id="goods-confirm" onclick="getContent()">添加</div>
                 </div>
             </div>
         </div>
     </div>
 </body>
     <script src="./jquery/dist/jquery.min.js"></script>
+    <script src="./javascript/ueditor.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"> </script>
 <script>
     UE.getEditor('editor');
 </script>
