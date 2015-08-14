@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei,SimSun,Arial;
+}
+.right-content {
+    width: 99%;
+    overflow: hidden;
+    float: left;
+    padding-top: 10px;
+    font-size: 12px;
+}
+#show-back-stage-down {
+    position: relative;
+}
+.information1 {
+    width: 99.9%;
+    overflow: hidden;
+    background: #f9f9f9;
+    margin-top: 10px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+.add-goods {
+    width: 97%;
+    overflow: hidden;
+    margin: 0 auto;
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.add-goods p {
+    line-height: 28px;
+    margin-bottom: 1px;
+    text-indent: 12px;
+    color: #404040;
+    background: #d1d9dc;
+    border-top: 1px solid #e0e0e0;
+}
+.add-goods-name {
+    width: 97%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.add-goods-name .add-goods-name-a {
+    text-indent: 12px;
+    color: #404040;
+    margin-bottom: 5px;
+}
+em, i {
+    font-style: normal;
+}
+.add-goods-name .add-goods-name-a em {
+    position: relative;
+}
+.addgoods-name-top {
+    vertical-align: top;
+}
