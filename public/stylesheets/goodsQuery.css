@@ -17,3 +17,6 @@ td {
     margin-left: 989px;
     margin-top: -41px;
 }
+.table-bordered > tbody > tr > td{
+    vertical-align: middle;
+}
