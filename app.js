@@ -42,8 +42,8 @@ app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), function(req, res
     }
 }));
 
-// var index = require("./router/index");
-// app.get('/', index);
+var index = require("./routes/index");
+app.use('/index', index);
 
 var add = require('./routes/add');
 app.use('/add',add);

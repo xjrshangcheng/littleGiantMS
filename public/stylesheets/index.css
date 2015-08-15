@@ -1,0 +1,26 @@
+.top {
+    width: 1150px;
+    height: 73px;
+    margin-left: 191px;
+    margin-top: -72px;
+    background-color: rgba(205, 197, 197, 0.19);
+    font-size: 34px;
+}
+.title {
+    background-color: rgba(205, 197, 197, 0.19);
+    width: 189px;
+    height: 73px;
+    font-size: 30px;
+}
+.left {
+    background-color: rgba(205, 197, 197, 0.19);
+    width: 191px;
+    height: 500px;
+}
+.right {
+    /*background-color: green;*/
+    width: 1149px;
+    height: 500px;
+    margin-top: -500px;
+    margin-left: 192px;
+}
