@@ -22,4 +22,5 @@ td {
 }
 .form-control {
     width: 76px;
+    margin: 0 auto;
 }
