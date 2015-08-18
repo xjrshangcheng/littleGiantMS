@@ -1,26 +1,85 @@
 .top {
     width: 1150px;
     height: 73px;
-    margin-left: 191px;
-    margin-top: -72px;
-    background-color: rgba(205, 197, 197, 0.19);
+    margin-left: 141px;
+    margin-top: -83px;
+    background-color: rgba(116, 133, 153, 1);
     font-size: 34px;
 }
 .title {
-    background-color: rgba(205, 197, 197, 0.19);
+    background-color: rgba(116, 133, 153, 1);
     width: 189px;
     height: 73px;
     font-size: 30px;
+    color: rgb(249, 243, 243);
+    margin-top: -49px;
+    margin-left: -48px;
+    text-align: center;
+    line-height: 73px;
 }
 .left {
     background-color: rgba(205, 197, 197, 0.19);
     width: 191px;
     height: 500px;
+    margin-left: -45px;
 }
 .right {
     /*background-color: green;*/
-    width: 1149px;
+    width: 1093px;
     height: 500px;
     margin-top: -500px;
-    margin-left: 192px;
+    margin-left: 150px;
+}
+dt {
+    font-size: 20px;
+    margin-left: 12px;
+}
+dd {
+    font-size: 15px;
+    margin-left: 12px;
+}
+li {
+    font-size: 18px;
+    margin-left: 60px;
+    width: 83px;
+    height: 27px;
+}
+dl {
+    margin-left: 10px;
+}
+
+#nav {
+    line-height: 24px;
+    list-style-type: none;
+    background: #666;
+}
+#nav a:visited {
+    color: #666;
+    text-decoration: none;
+}
+#nav li {
+    float: left;
+    width: 80px;
+    background: #CCC;
+    margin-top: 23px;
+}
+#nav li a:hover {
+    background: #999;
+}
+#nav li ul {
+    line-height: 27px;
+    list-style-type: none;
+    text-align: left;
+    left: -999em;
+    width: 180px;
+    position: absolute;
+}
+#nav li ul li {
+    float: left;
+    width: 180px;
+    background: #F6F6F6;
+}
+
+#nav li:hover ul {
+    left: auto;
 }
