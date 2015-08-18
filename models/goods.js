@@ -9,13 +9,14 @@ module.exports = function(sequelize, DataTypes) {
         standard_one: DataTypes.STRING,
         standard_two: DataTypes.STRING,
         sales: DataTypes.STRING,
-        detail: DataTypes.INTEGER,
+        detail: DataTypes.STRING,
         type: DataTypes.STRING,
         img: DataTypes.STRING,
         recommend: DataTypes.STRING,
         more_img: DataTypes.STRING,
         special_img: DataTypes.STRING,
-        detail_img: DataTypes.STRING
+        detail_img: DataTypes.STRING,
+        remark: DataTypes.STRING
     }, {
         freezeTableName: true,
         timestamps: false
