@@ -20,27 +20,31 @@
                                 <span class="goods-icon">*</span>
                                 商品名称：
                             </em>
-                            <textarea class="add-goods-name-width" rows="2" id="edit-goods-name"></textarea>
+                            <textarea class="add-goods-name-width" rows="2" id="goods-name"></textarea>
                             <span>(商品名称在160字以内(name))</span>
+                        </div>
+                        <div class="alert alert-block hide" id="warning-block">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <h4>Warning!</h4>Best check yo self, you're not...
                         </div>
                         <div class="add-goods-name-a">
                             <em class="add-goods-name-top">商品副题：</em>
-                            <textarea class="add-goods-name-width" rows="2" id="edit-goods-search-key"></textarea>
+                            <textarea class="add-goods-name-width" rows="2" id="goods-simple-info"></textarea>
                             <span>(商品副题在100字以内(info))</span>
                         </div>
                         <div class="add-goods-name-a">
                             <em class="add-goods-name-top">商品规格：</em>
-                            <textarea class="add-goods-name-width" rows="2" id="edit-goods-search-key"></textarea>
-                            <span>(若有多个规格，用中文“，”隔开)</span>
+                            <textarea class="add-goods-name-width" rows="2" id="goods-standards"></textarea>
+                            <span>(若有多个规格，用一个空格隔开)</span>
                         </div>
                         <div class="add-goods-name-a">
                             <em class="add-goods-name-top">商品备注：</em>
-                            <textarea class="add-goods-name-width" rows="2" id="edit-goods-remark"></textarea>
+                            <textarea class="add-goods-name-width" rows="2" id="goods-remark"></textarea>
                             <span>(商品备注不出现在商品描述中,仅供后台管理商品使用 100字以内)</span>
                         </div>
                         <div class="add-goods-name-a">
                             <em><span class="goods-icon">*</span>商品单位：</em>
-                            <input id="edit-goods-market-unit" value="件">
+                            <input id="goods-market-unit" value="件">
                         </div>
                         <div class="add-goods-name-a" id="goods-main-class">
                             <em><span class="goods-icon">*</span>所属分类：</em>
@@ -182,6 +186,7 @@
     </div>
 </body>
     <script src="./jquery/dist/jquery.min.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./javascripts/add.js"></script>
     <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
     <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
