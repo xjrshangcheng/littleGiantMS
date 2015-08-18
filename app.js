@@ -7,6 +7,8 @@ var cookieParser = require('cookie-parser');
 var path = require('path');
 var ueditor = require("ueditor");
 
+var serverConfig = require(__dirname + '/config/server.json');
+
 app.set('view engine', 'jade');
 
 app.use(bodyParser.urlencoded({
@@ -15,14 +17,11 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static("public"));
 app.use(express.static("bower_components"));
-
 app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), function(req, res, next) {
     if (req.query.action === 'uploadimage') {
         var foo = req.ueditor;
-
         var imgname = req.ueditor.filename;
-
-        var img_url = '/images/goods/' ;
+        var img_url = '/images/ueditor/' ;
         res.ue_up(img_url);
     }
     else if (req.query.action === 'listimage') {
