@@ -2,14 +2,12 @@ var models = require('../models');
 var Goods = models.goods;
 
 var add = function(req, res) {
-    console.log(req.body.id);
-    console.log(req.body);
-    Goods.findAll({
+    Goods.find({
         where : {
             id : req.body.id
         }
     }).then(function(data) {
-        if(data[0] === undefined) {
+        if(data === null) {
             Goods.create ({
                 id : req.body.id,
                 name : req.body.name,

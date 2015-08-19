@@ -13,7 +13,7 @@ function menuFix() {
         }
         getAllLi[i].onmouseout = function() {
             this.className = this.className.replace(new RegExp("( ?|^)sfhover\\b"),"");
-        }nvm
+        }
     }
 }
 window.onload = menuFix;

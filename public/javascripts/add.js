@@ -22,7 +22,6 @@ $("#goods-confirm").on("click",function() {
             id: id,
             detail: content
         }, function(data) {
-            console.log(data);
             if (data.status === "200") {
                 alert("商品添加成功");
             } else if (data.status === "400") {
@@ -34,7 +33,7 @@ $("#goods-confirm").on("click",function() {
 
 var detail = function(editContent) {
     var Splitstring = editContent.split('src="');
-    var addString = 'src="http://localhost:8080';
+    var addString = 'src="http://localhost:3001';
     var joinString = '';
     Splitstring.forEach(function(val,i) {
         if (val.indexOf("/images") !== -1) {
@@ -69,27 +68,9 @@ var executeJudge = function(selector) {
     return false;
 }
 
-$("#price, #code, #number").on("keydown", function() {
+$("#price, #code, #number").on("keyup", function() {
     $(this)[0].value = $(this)[0].value.replace(/[^\d.]/g,"");
     $(this)[0].value = $(this)[0].value.replace(/^\./g,"");
     $(this)[0].value = $(this)[0].value.replace(/\.{2,}/g,".");
     $(this)[0].value = $(this)[0].value.replace(".","$#$").replace(/\./g,"").replace("$#$",".");
-});
-
-$("#price").blur(function() {
-    if(!isNaN($("#price")[0].value) === false) {
-        $("#price")[0].value = $("#price")[0].value.substring(0,$("#price")[0].value.length - 1);
-    }
-});
-
-$("#code").blur(function() {
-    if(!isNaN($("#code")[0].value) === false) {
-        $("#code")[0].value = $("#code")[0].value.substring(0,$("#code")[0].value.length - 1);
-    }
-});
-
-$("#number").blur(function() {
-    if(!isNaN($("#number")[0].value) === false) {
-        $("#number")[0].value = $("#number")[0].value.substring(0,$("#number")[0].value.length - 1);
-    }
 });

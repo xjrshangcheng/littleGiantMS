@@ -4,13 +4,11 @@ var models = require('../models');
 var Goods = models.goods;
 var add = require('../service/add');
 
-
 router.get('/', function(req, res) {
     res.render('add');
 });
 
 router.post('/', function(req, res) {
-    console.log(typeof add);
     add(req, res);
 })
 
