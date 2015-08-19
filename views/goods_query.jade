@@ -1,4 +1,89 @@
-extends ./layout.jade
-
-block content
-    include goods_query.html
+doctype html
+html(lang="en")
+    head
+        title= "category"
+        link(rel="stylesheet" href="./stylesheets/header.css")
+        link(rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css")
+        link(rel="stylesheet" href="./stylesheets/goodsQuery.css")
+    body
+        include header.html
+        .container
+            .panel.panel-default
+                .panel-heading
+                    h3(class="panel-title")
+                        | 小巨人网上商城
+                .panel-body
+                    .form-inline
+                        .form-group 
+                            .my-goods-name
+                                label(for="goods-name") 商品名称:
+                                input(type="text" class="form-control" id="goods-name" placeholder="请输入商品名称")
+                        .form-group
+                            .my-goods-id
+                                label(for="goods-id") 商品ID:
+                                input(type="text" class="form-control" id="goods-id" placeholder="请输入商品ID")
+                        .form-group 
+                            .my-goods-name
+                                label(for="goods-price") 售&nbsp;&nbsp;&nbsp;&nbsp;价 :
+                                input(type="text" class="form-control" size="12" id="goods-price")
+                                | -
+                                input(type="text"  size="12" id="goods-price" class="form-control")
+                        .level
+                            label(for="goods-price") 级&nbsp;&nbsp;别 :
+                            select(class="form-control")
+                                option 一级
+                                option 二级
+                                option 三级
+                        .button
+                            button(type="button" class="btn btn-default btn-lg active") 查询
+                table(class="table table-bordered")  
+                    thead
+                        tr(class="active")
+                            td 商品名称
+                            td 售价
+                            td 销量
+                            td 库存
+                            td 所属分类
+                            td 状态
+                            td 操作
+                    tbody
+                        tr 
+                            td 手机
+                            td 100
+                            td 100
+                            td 50
+                            td 一级
+                            td 
+                                select(class="form-control")
+                                    option 关闭
+                                    option 开启
+                            td
+                                a(class="btn btn-default" href="#" role="button") 删除
+                                a(class="btn btn-default" href="#" role="button") 修改    
+                        tr 
+                            td 手机
+                            td 100
+                            td 100
+                            td 50
+                            td 一级
+                            td 
+                                select(class="form-control")
+                                    option 关闭
+                                    option 开启
+                            td
+                                a(class="btn btn-default" href="#" role="button") 删除
+                                a(class="btn btn-default" href="#" role="button") 修改   
+                        tr 
+                            td 手机
+                            td 100
+                            td 100
+                            td 50
+                            td 一级
+                            td 
+                                select(class="form-control")
+                                    option 关闭
+                                    option 开启
+                            td
+                                a(class="btn btn-default" href="#" role="button") 删除
+                                a(class="btn btn-default" href="#" role="button") 修改    
+        include footer.html
