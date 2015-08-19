@@ -19,9 +19,7 @@ app.use(express.static("public"));
 app.use(express.static("bower_components"));
 app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), function(req, res, next) {
     if (req.query.action === 'uploadimage') {
-        var foo = req.ueditor;
-        var imgname = req.ueditor.filename;
-        var img_url = '/images/ueditor/' ;
+        var img_url = '/images/goods/' ;
         res.ue_up(img_url);
     }
     else if (req.query.action === 'listimage') {
@@ -40,7 +38,7 @@ app.use('/add',add);
 var goods_query = require('./routes/goods_query');
 app.use('/goods_query',goods_query);
 
-var server = app.listen(3000, function() {
+var server = app.listen(3001, function() {
 
     var host = server.address().address;
     var port = server.address().port;
