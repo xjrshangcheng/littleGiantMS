@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="./stylesheets/index.css">
-</head>
-
-<body>
+<header>
     <div class="title">
         管理系统
     </div>
     <div class="top">
         <ul id="nav">
             <li><a href="#">商品管理</a>
-                <ul>
-                    <li><a href="#">商品添加</a></li>
+                <ul >
+                    <li><a href="./add" >商品添加</a></li>
                     <li><a href="#">商品删除</a></li>
-                    <li><a href="#">商品查询</a></li>
+                    <li><a href="./goods_query">商品查询</a></li>
                     <li><a href="#">商品修改</a></li>
                 </ul>
             </li>
@@ -69,32 +60,10 @@
                     <li><a href="#">联系联系联系</a></li>
                 </ul>
             </li>
+
         </ul>
     </div>
-    <div class="left">
-        <br>
-        <br>
-        <dl>
-                <dt class="dt">商品管理</dt>
-                    <span class="disappear">
-                        <dd>商品添加</dd>
-                        <dd>商品删除</dd>
-                        <dd>商品查询</dd>
-                        <dd>商品修改</dd>
-                    </span>
-                <dt>服务标签</dt>
-                    <span>
-                        <dd>服务项目</dd>
-                        <dd>绑定商品</dd>
-                        <dd>查询</dd>
-                    </span>
-            </dl>
-    </div>
-    <div class="right">
-
-    </div>
 </body>
-<script src="./jquery/dist/jquery.js"></script>
-<script src="./javascripts/index.js"></script>
-
-</html>
+<script type="text/javascript" src="./jquery/dist/jquery.js"></script>
+<script type="text/javascript" src='./javascripts/header.js'></script>
+</header>
