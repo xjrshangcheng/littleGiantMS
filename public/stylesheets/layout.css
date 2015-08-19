@@ -21,26 +21,18 @@ li {
     margin-left: 60px;
     width: 83px;
     height: 27px;
-}
-#nav {
-    line-height: 24px;
-    list-style-type: none;
-    background: #666;
-}
-#nav a:visited {
-    color: #666;
-    text-decoration: none;
-}
-#nav li {
     float: left;
-    width: 80px;
     background: #CCC;
     margin-top: 23px;
+}
+#nav {
+    list-style-type: none;
 }
 #nav li a:hover {
     background: #999;
 }
 #nav li ul {
+    z-index: 2;
     line-height: 27px;
     list-style-type: none;
     text-align: left;
@@ -49,7 +41,7 @@ li {
     position: absolute;
 }
 a {
-  color: #1F2224;
+  color: #373A3D !important;
   text-decoration: none;
 }
 #nav li ul li {
