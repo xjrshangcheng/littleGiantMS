@@ -1,21 +1,33 @@
 td {
     text-align:center;
 }
-.my-goods-name {
-    margin-left: 63px;
-    margin-bottom: 0px;
+.form-group {
+    width: 48%;
+    line-height: 3em;
+    margin-left: 1%;
 }
-.my-goods-id {
-    margin-left: 588px;
-    margin-top: -42px;
-}
-.level {
-    margin-left: 590px;
-    margin-top: -20px;
+.form-inline {
+    position: relative;
 }
 .button {
-    margin-left: 973px;
-    margin-bottom: -41px;
+  position: absolute;
+  right: 8%;
+  bottom: 2%;
+}
+.form-group input, .form-group select  {
+    display: inline-block;
+    margin-left: 10px;
+}
+.minus {
+    margin-left: 10px;
+}
+@media (max-width: 768px) {
+    .form-inline .form-group {
+        width: 100%;
+    }
+    .form-group input, .form-group select  {
+        width: auto;
+    }
 }
 .table-bordered > tbody > tr > td {
     vertical-align: middle;

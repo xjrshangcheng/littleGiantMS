@@ -5,6 +5,7 @@ html(lang="en")
         link(rel="stylesheet" href="./stylesheets/layout.css")
         link(rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css")
         link(rel="stylesheet" href="./stylesheets/goodsQuery.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
     body
         include header.html
         .container
@@ -24,11 +25,11 @@ html(lang="en")
                                 input(type="text" class="form-control" id="goods-id" placeholder="请输入商品ID")
                         .form-group
                             .my-goods-name
-                                label(for="goods-price") 售&nbsp;&nbsp;&nbsp;&nbsp;价 :
+                                label(for="goods-price") 售&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价:
                                 input(type="text" class="form-control" size="12" id="goods-price")
-                                | -
+                                span.minus -
                                 input(type="text"  size="12" id="goods-price" class="form-control")
-                        .level
+                        .form-group.level
                             label(for="goods-price") 级&nbsp;&nbsp;别 :
                             select(class="form-control")
                                 option 一级
