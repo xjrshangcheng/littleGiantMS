@@ -14,7 +14,7 @@ html(lang="en")
                         | 小巨人网上商城
                 .panel-body
                     .form-inline
-                        .form-group 
+                        .form-group
                             .my-goods-name
                                 label(for="goods-name") 商品名称:
                                 input(type="text" class="form-control" id="goods-name" placeholder="请输入商品名称")
@@ -22,7 +22,7 @@ html(lang="en")
                             .my-goods-id
                                 label(for="goods-id") 商品ID:
                                 input(type="text" class="form-control" id="goods-id" placeholder="请输入商品ID")
-                        .form-group 
+                        .form-group
                             .my-goods-name
                                 label(for="goods-price") 售&nbsp;&nbsp;&nbsp;&nbsp;价 :
                                 input(type="text" class="form-control" size="12" id="goods-price")
@@ -36,7 +36,7 @@ html(lang="en")
                                 option 三级
                         .button
                             button(type="button" class="btn btn-default btn-lg active") 查询
-                table(class="table table-bordered")  
+                table(class="table table-bordered")
                     thead
                         tr(class="active")
                             td 商品名称
@@ -47,43 +47,47 @@ html(lang="en")
                             td 状态
                             td 操作
                     tbody
-                        tr 
+                        tr
                             td 手机
                             td 100
                             td 100
                             td 50
                             td 一级
-                            td 
+                            td
                                 select(class="form-control")
                                     option 关闭
                                     option 开启
                             td
                                 a(class="btn btn-default" href="#" role="button") 删除
-                                a(class="btn btn-default" href="#" role="button") 修改    
-                        tr 
+                                a(class="btn btn-default" href="#" role="button") 修改
+                        tr
                             td 手机
                             td 100
                             td 100
                             td 50
                             td 一级
-                            td 
+                            td
                                 select(class="form-control")
                                     option 关闭
                                     option 开启
                             td
                                 a(class="btn btn-default" href="#" role="button") 删除
-                                a(class="btn btn-default" href="#" role="button") 修改   
-                        tr 
+                                a(class="btn btn-default" href="#" role="button") 修改
+                        tr
                             td 手机
                             td 100
                             td 100
                             td 50
                             td 一级
-                            td 
+                            td
                                 select(class="form-control")
                                     option 关闭
                                     option 开启
                             td
                                 a(class="btn btn-default" href="#" role="button") 删除
-                                a(class="btn btn-default" href="#" role="button") 修改    
+                                a(class="btn btn-default" href="#" role="button") 修改
+        script(src='./jquery/dist/jquery.min.js')
+        script(src='./javascripts/goods-query.js')
+        script(src='./bootstrap/dist/js/bootstrap.min.js')
+
         include footer.html
