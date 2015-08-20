@@ -3,11 +3,11 @@ td {
 }
 .my-goods-name {
     margin-left: 63px;
-    margin-top: -6px;
+    margin-bottom: 0px;
 }
 .my-goods-id {
     margin-left: 588px;
-    margin-top: -20px;
+    margin-top: -42px;
 }
 .level {
     margin-left: 590px;
@@ -15,7 +15,7 @@ td {
 }
 .button {
     margin-left: 973px;
-    margin-top: -41px;
+    margin-bottom: -41px;
 }
 .table-bordered > tbody > tr > td {
     vertical-align: middle;

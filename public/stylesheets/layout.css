@@ -35,13 +35,11 @@ li {
 }
 #nav li ul {
     z-index: 2;
-    line-height: 27px;
     list-style-type: none;
-    text-align: left;
-    left: -999em;
+    left: -999px;
     width: 180px;
     position: absolute;
-    margin-left: -90px;
+    margin-left: -80px;
 }
 a {
   color: #373A3D !important;
