@@ -1,4 +1,16 @@
 extends ./layout.jade
 
+block append head 
+    link(rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet" href="./stylesheets/add.css")
 block content
     include add.html
+block scripts 
+    script(src="./jquery/dist/jquery.min.js")
+    script(src="./bootstrap/dist/js/bootstrap.min.js")
+    script(type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js")
+    script(type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js")
+    script(type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js")
+    script(src="./javascripts/add.js")
+    script.
+        UE.getEditor('editor');
