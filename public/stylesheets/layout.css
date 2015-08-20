@@ -21,7 +21,10 @@
 #nav {
     margin: 0 0 0 10%;
     line-height: 50px;
+    list-style-type: none;
+    padding-left: 40px;   
 }
+
 .title-li {
     position: relative;
     margin-right: 2em;
@@ -44,9 +47,7 @@
   color: #fff;
   text-decoration: none;
 }
-#nav  {
-    list-style-type: none;
-}
+
 #nav ul li {
     list-style-type: none;
 }
