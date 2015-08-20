@@ -6,6 +6,7 @@
     margin: 0;
     font-size: 30px;
     line-height: 50px;
+    list-style-type: none;
 }
 .title a {
     float: left;
@@ -43,7 +44,10 @@
   color: #fff;
   text-decoration: none;
 }
-#nav {
+#nav  {
+    list-style-type: none;
+}
+#nav ul li {
     list-style-type: none;
 }
 #nav li ul li {
