@@ -115,6 +115,12 @@ select {
 .sort-input2 {
     color: #7f7f7f;
 }
+.upload-picture {
+    background-color: #F9F9F9;
+    border: 0px;
+    width: 100px;
+    padding-top: 4px;
+}
 .add-goods-photo {
     width: 97%;
     overflow: hidden;
@@ -122,7 +128,7 @@ select {
 }
 .add-goods-photo .add-goods-photo-a {
     width: 132px;
-    height: 150px;
+    height: 170px;
     border: 1px solid #e6e6e6;
     padding: 5px 16px 0 16px;
     margin-right: 20px;
