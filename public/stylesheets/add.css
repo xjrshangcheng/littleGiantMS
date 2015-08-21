@@ -167,8 +167,12 @@ li {
     background: #ccc;
     border-radius: 3px;
 }
+#goods-confirm:hover {
+    background-color: #563D7C;
+}
 #goods-confirm {
     float: right;
     margin-right: 536px;
     margin-top: 11px;
+    cursor: pointer;
 }

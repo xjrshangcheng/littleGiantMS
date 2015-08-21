@@ -82,3 +82,46 @@ $("#price, #code, #number").on("keyup", function() {
     $(this)[0].value = $(this)[0].value.replace(/\.{2,}/g,".");
     $(this)[0].value = $(this)[0].value.replace(".","$#$").replace(/\./g,"").replace("$#$",".");
 });
+
+$("#uploadFileOne, #uploadFileTwo, #uploadFileThree, #uploadFileFour, #uploadFileFive").on('click',function() {
+    var uploadId = this.id;
+    console.log(uploadId);
+    if(uploadId === "uploadFileOne") {
+        execute("#frmUploadFileOne","#imgShowOne");
+    }
+    if(uploadId === "uploadFileTwo") {
+        execute("#frmUploadFileTwo","#imgShowTwo");
+    }
+    if(uploadId === "uploadFileThree") {
+        execute("#frmUploadFileThree","#imgShowThree");
+    }
+    if(uploadId === "uploadFileFour") {
+        execute("#frmUploadFileFour","#imgShowFour");
+    }
+    if(uploadId === "uploadFileFive") {
+        execute("#frmUploadFileFive","#imgShowFive");
+    }
+})
+
+function execute(one,two,three) {
+    var formData = new FormData($(one)[0]);
+
+    $.ajax({
+        url: '/upload',
+        type: 'POST',
+        data: formData,
+        async: false,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(data) {
+            if (200 === data.code) {
+                $(two).attr('src', data.msg.url);
+            }
+            console.log('imgUploader upload success, data:', data);
+        },
+        error: function() {
+            alert("error")
+        }
+    });
+}
