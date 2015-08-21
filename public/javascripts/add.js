@@ -23,12 +23,16 @@ $("#goods-confirm").on("click",function() {
             detail: content
         }, function(data) {
             if (data.status === "200") {
-                alert("商品添加成功");
+                $("#goods-confirm").popover({title: "亲~~", content: "添加商品成功"});
+                $("#goods-confirm").popover('show');
+                window.setTimeout(function() { $("#goods-confirm").popover('destroy') }, 2000);
             } else if (data.status === "400") {
-                alert(data.message);
-            } else {}
+                $("#goods-confirm").popover({title: "亲~~", content: "商品id重复，请确认之后再次添加"});
+                $("#goods-confirm").popover('show');
+                window.setTimeout(function() { $("#goods-confirm").popover('destroy') }, 2000);
+            }
         });
-    } else {}
+    }
 })
 
 var detail = function(editContent) {
@@ -54,7 +58,7 @@ var judgeContent = function(goodsName,goodsUnit,price,number,id) {
         executeJudge("#price");
     }  else if (number === ''){
         executeJudge("#number");
-    }  else if (id === ''){
+    }  else if (id === '' || id === '00' || id === '0' || id === '000'){
         executeJudge("#code");
     } else {
         return true;
