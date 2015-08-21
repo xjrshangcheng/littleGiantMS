@@ -27,9 +27,10 @@ $("#goods-confirm").on("click",function() {
                 $("#goods-confirm").popover('show');
                 window.setTimeout(function() { $("#goods-confirm").popover('destroy') }, 2000);
             } else if (data.status === "400") {
-                $("#goods-confirm").popover({title: "亲~~", content: "商品id重复，请确认之后再次添加"});
-                $("#goods-confirm").popover('show');
-                window.setTimeout(function() { $("#goods-confirm").popover('destroy') }, 2000);
+                $("#code").focus();
+                $("#code").popover({title: "亲~~", content: "商品id重复，请确认之后再次添加"});
+                $("#code").popover('show');
+                window.setTimeout(function() { $("#code").popover('destroy') }, 2000);
             }
         });
     }
@@ -59,7 +60,10 @@ var judgeContent = function(goodsName,goodsUnit,price,number,id) {
     }  else if (number === ''){
         executeJudge("#number");
     }  else if (id === '' || id === '00' || id === '0' || id === '000'){
-        executeJudge("#code");
+        $("#code").focus();
+        $("#code").popover({title: "亲~~", content: "商品id不能为空或以0开头"});
+        $("#code").popover('show');
+        window.setTimeout(function() { $("#code").popover('destroy') }, 2000);
     } else {
         return true;
     }
