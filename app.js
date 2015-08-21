@@ -2,7 +2,10 @@ var mysql = require('mysql');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var cookieParser = require('cookie-parser');
+var cookieParser = require('cookie-parser')
+    , fs = require('fs')
+    , path = require('path')
+    , multipart = require('connect-multiparty');
 
 var path = require('path');
 var ueditor = require("ueditor");
@@ -31,6 +34,15 @@ app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), function(req, res
         res.redirect('/ueditor/nodejs/config.json');
     }
 }));
+
+app.post('/upload', multipart(), function(req, res){
+  var filename = req.files.files.originalFilename || path.basename(req.files.files.ws.path);
+  console.log(filename);
+  var targetPath = path.dirname(__filename) + '/public/images/goods/' + filename;
+  fs.createReadStream(req.files.files.ws.path).pipe(fs.createWriteStream(targetPath));
+  res.json({code: 200, msg: {url: 'http://' + req.headers.host + '/images/goods/' + filename}});
+});
+
 
 var add = require('./routes/add');
 app.use('/add',add);
