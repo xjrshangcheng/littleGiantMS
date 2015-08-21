@@ -15,7 +15,8 @@
     "mysql": "^2.8.0",
     "sequelize": "^3.5.1",
     "static-favicon": "~1.0.0",
-    "ueditor": "^1.0.0"
+    "ueditor": "^1.0.0",
+    "connect-multiparty": "~1.2.5"
   },
   "devDependencies": {
     "sequelize-cli": "^1.7.4"
