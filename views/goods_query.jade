@@ -2,8 +2,8 @@ doctype html
 html(lang="en")
     head
         title= "category"
-        link(rel="stylesheet" href="./stylesheets/layout.css")
         link(rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css")
+        link(rel="stylesheet" href="./stylesheets/layout.css")
         link(rel="stylesheet" href="./stylesheets/goodsQuery.css")
         meta(name="viewport" content="width=device-width, initial-scale=1")
     body
@@ -36,7 +36,7 @@ html(lang="en")
                                 option 二级
                                 option 三级
                         .button
-                            button(type="button" class="btn btn-default btn-lg active") 查询
+                            button(type="button"  id="goods-query" class="btn btn-default btn-lg active") 查询
                 table(class="table table-bordered")
                     thead
                         tr(class="active")
@@ -47,40 +47,15 @@ html(lang="en")
                             td 所属分类
                             td 状态
                             td 操作
-                    tbody
+                    tbody.query-result
+                        //-for (var i = 0; i < queryResult.length; i++)
                         tr
-                            td 手机
-                            td 100
-                            td 100
-                            td 50
-                            td 一级
-                            td
-                                select(class="form-control")
-                                    option 关闭
-                                    option 开启
-                            td
-                                a(class="btn btn-default" href="#" role="button") 删除
-                                a(class="btn btn-default" href="#" role="button") 修改
-                        tr
-                            td 手机
-                            td 100
-                            td 100
-                            td 50
-                            td 一级
-                            td
-                                select(class="form-control")
-                                    option 关闭
-                                    option 开启
-                            td
-                                a(class="btn btn-default" href="#" role="button") 删除
-                                a(class="btn btn-default" href="#" role="button") 修改
-                        tr
-                            td 手机
-                            td 100
-                            td 100
-                            td 50
-                            td 一级
-                            td
+                            td.name= queryResult
+                            td.price
+                            td.sales
+                            td.inventory
+                            td.level
+                            td.status
                                 select(class="form-control")
                                     option 关闭
                                     option 开启
@@ -88,7 +63,7 @@ html(lang="en")
                                 a(class="btn btn-default" href="#" role="button") 删除
                                 a(class="btn btn-default" href="#" role="button") 修改
         script(src='./jquery/dist/jquery.min.js')
-        script(src='./javascripts/goods-query.js')
         script(src='./bootstrap/dist/js/bootstrap.min.js')
+        script(src='./javascripts/goods-query.js')
 
         include footer.html
