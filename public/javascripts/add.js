@@ -9,6 +9,7 @@ $("#goods-confirm").on("click",function() {
     var price = $("#price").prop("value");
     var number = $("#number").prop("value");
     var id = $("#code").prop("value");
+    var imgs = getImages("#imgShowOne","#imgShowTwo","#imgShowThree","#imgShowFour","#imgShowFive");
 
     if (judgeContent(goodsName, goodsUnit, price, number, id)) {
         $.post("/add", {
@@ -20,7 +21,8 @@ $("#goods-confirm").on("click",function() {
             price: price,
             number: number,
             id: id,
-            detail: content
+            detail: content,
+            imgs: imgs
         }, function(data) {
             if (data.status === "200") {
                 $("#goods-confirm").popover({title: "亲~~", content: "添加商品成功"});
@@ -36,10 +38,44 @@ $("#goods-confirm").on("click",function() {
     }
 })
 
+var getImages = function(img1, img2, img3, img4, img5) {
+    var images = "";
+    
+    if($(img1)[0].src !== "" && $(img1)[0].src !== "http://localhost:3001/images/img.jpg") {
+        images += $(img1)[0].src;
+        images += " ";
+    }
+    if($(img2)[0].src !== "" && $(img2)[0].src !== "http://localhost:3001/images/img.jpg") {
+        images += $(img2)[0].src;
+        images += " ";
+    }
+    if($(img3)[0].src !== "" && $(img3)[0].src !== "http://localhost:3001/images/img.jpg") {
+        images += $(img3)[0].src;
+        images += " ";
+    }
+    if($(img4)[0].src !== "" && $(img4)[0].src !== "http://localhost:3001/images/img.jpg") {
+        images += $(img4)[0].src;
+        images += " ";
+    }
+    if($(img5)[0].src !== "" && $(img5)[0].src !== "http://localhost:3001/images/img.jpg") {
+        images += $(img5)[0].src;
+    }
+    return judgeImg(images);
+}
+
+var judgeImg = function(imgs) {
+    if(imgs !== "" && imgs[imgs.length-1] !== " ") {
+        return imgs;
+    } else if(imgs !== "") {
+        return imgs.substring(0, imgs.length - 1);
+    }
+}
+
 var detail = function(editContent) {
     var Splitstring = editContent.split('src="');
     var addString = 'src="http://localhost:3001';
     var joinString = '';
+
     Splitstring.forEach(function(val,i) {
         if (val.indexOf("/images") !== -1) {
             joinString += (addString + val);
@@ -85,20 +121,20 @@ $("#price, #code, #number").on("keyup", function() {
 
 $("#uploadFileOne, #uploadFileTwo, #uploadFileThree, #uploadFileFour, #uploadFileFive").on('click',function() {
     var uploadId = this.id;
-    console.log(uploadId);
-    if(uploadId === "uploadFileOne") {
+
+    if(uploadId === "uploadFileOne" && typeof($("#one-picture :input")[0].files[0]) !== "undefined") {
         execute("#frmUploadFileOne","#imgShowOne");
     }
-    if(uploadId === "uploadFileTwo") {
+    if(uploadId === "uploadFileTwo" && typeof($("#two-picture :input")[0].files[0]) !== "undefined") {
         execute("#frmUploadFileTwo","#imgShowTwo");
     }
-    if(uploadId === "uploadFileThree") {
+    if(uploadId === "uploadFileThree" && typeof($("#three-picture :input")[0].files[0]) !== "undefined") {
         execute("#frmUploadFileThree","#imgShowThree");
     }
-    if(uploadId === "uploadFileFour") {
+    if(uploadId === "uploadFileFour" && typeof($("#four-picture :input")[0].files[0]) !== "undefined") {
         execute("#frmUploadFileFour","#imgShowFour");
     }
-    if(uploadId === "uploadFileFive") {
+    if(uploadId === "uploadFileFive" && typeof($("#five-picture :input")[0].files[0]) !== "undefined") {
         execute("#frmUploadFileFive","#imgShowFive");
     }
 })
@@ -118,10 +154,35 @@ function execute(one,two,three) {
             if (200 === data.code) {
                 $(two).attr('src', data.msg.url);
             }
-            console.log('imgUploader upload success, data:', data);
         },
         error: function() {
             alert("error")
         }
     });
+}
+
+$("#photo-delete-one, #photo-delete-two, #photo-delete-three, #photo-delete-four, #photo-delete-five").on('click',function() {
+    var uploadId = this.id;
+
+    if(uploadId === "photo-delete-one") {
+        deletePicture("#imgShowOne","#one-picture");
+    }
+    if(uploadId === "photo-delete-two") {
+        deletePicture("#imgShowTwo","#two-picture");
+    }
+    if(uploadId === "photo-delete-three") {
+        deletePicture("#imgShowThree","#three-picture");
+    }
+
+    if(uploadId === "photo-delete-four") {
+        deletePicture("#imgShowFour","#four-picture");
+    }
+    if(uploadId === "photo-delete-five") {
+        deletePicture("#imgShowFive","#five-picture");
+    }
+})
+
+function deletePicture(imgId,inputId) {
+    $(imgId).prop("src", "/images/img.jpg");
+    $(inputId).html('<input type="file" name="files" class="upload-picture"/>');
 }
