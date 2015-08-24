@@ -42,6 +42,8 @@ app.post('/upload', multipart(), function(req, res){
   res.json({code: 200, msg: {url: 'http://' + req.headers.host + '/images/goods/' + filename}});
 });
 
+var login = require('./routes/login');
+app.use('/login',login);
 
 var add = require('./routes/add');
 app.use('/add',add);

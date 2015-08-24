@@ -1,0 +1,16 @@
+.landing {
+    width: 400px;
+    height: 300px;
+    margin: 100px auto;
+}
+.landing h1 {
+    width: 150px;
+    margin: 40px auto;
+}
+button.btn.btn-primary.btn-lg {
+    width: 100px;
+    margin: 0px 40px;
+}
+.login {
+    margin: 40px 0px;
+}
