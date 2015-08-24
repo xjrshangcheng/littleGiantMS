@@ -16,6 +16,7 @@ var add = function(req, res) {
                 standard_one : req.body.standards,
                 sales : req.body.number,
                 detail : req.body.detail,
+                more_img : req.body.imgs,
                 remark : req.body.remark
             }).then(function() {
                 res.send({
