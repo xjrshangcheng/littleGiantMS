@@ -36,8 +36,7 @@ app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), function(req, res
 }));
 
 app.post('/upload', multipart(), function(req, res){
-  var filename = req.files.files.originalFilename || path.basename(req.files.files.ws.path);
-  console.log(filename);
+  var filename = req.files.files.size + req.files.files.originalFilename || path.basename(req.files.files.ws.path);
   var targetPath = path.dirname(__filename) + '/public/images/goods/' + filename;
   fs.createReadStream(req.files.files.ws.path).pipe(fs.createWriteStream(targetPath));
   res.json({code: 200, msg: {url: 'http://' + req.headers.host + '/images/goods/' + filename}});
