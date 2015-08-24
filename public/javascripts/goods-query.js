@@ -28,7 +28,11 @@ $(function() {
             //     inputBarcode: inputBarcode
             // },
             success: function(result) {
-
+                if (result.message === 'ok') {
+                    result.data.forEach(function(item) {
+                        $('<tr><td>' + item.name + '</td><td>' + item.price + '</td><td>' + item.sales + '</td><td>' + item.inventory + '</td><td>' + item.type + '</td><td>' + item.status + '</td><td><a class="btn btn-default" id="itemDel" href="#" role="button">删除</a><a class="btn btn-default" id="itemModify" href="#" role="button">修改</a></td></tr>').appendTo($('.query-result'));
+                    })
+                }
             }
         })
     });
