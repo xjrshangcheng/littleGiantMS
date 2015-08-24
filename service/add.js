@@ -4,12 +4,11 @@ var Goods = models.goods;
 var add = function(req, res) {
     Goods.find({
         where : {
-            id : req.body.id
+            barcode : req.body.id
         }
     }).then(function(data) {
         if(data === null) {
             Goods.create ({
-                id : req.body.id,
                 name : req.body.name,
                 info : req.body.info,
                 price : req.body.price,
@@ -17,7 +16,8 @@ var add = function(req, res) {
                 sales : req.body.number,
                 detail : req.body.detail,
                 more_img : req.body.imgs,
-                remark : req.body.remark
+                remark : req.body.remark,
+                barcode : req.body.id
             }).then(function() {
                 res.send({
                     status : "200",
