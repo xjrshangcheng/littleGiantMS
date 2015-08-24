@@ -16,7 +16,10 @@ module.exports = function(sequelize, DataTypes) {
         more_img: DataTypes.STRING,
         special_img: DataTypes.STRING,
         detail_img: DataTypes.STRING,
-        remark: DataTypes.STRING
+        remark: DataTypes.STRING,
+        barcode: DataTypes.STRING,
+        status: DataTypes.STRING,
+        inventory: DataTypes.INTEGER
     }, {
         freezeTableName: true,
         timestamps: false
