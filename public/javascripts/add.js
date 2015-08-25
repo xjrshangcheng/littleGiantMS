@@ -9,7 +9,7 @@ $("#goods-confirm").on("click",function() {
     var price = $("#price").prop("value");
     var number = $("#number").prop("value");
     var id = $("#code").prop("value");
-    var imgs = getImages("#imgShowOne","#imgShowTwo","#imgShowThree","#imgShowFour","#imgShowFive");
+    var imgs = getImages();
 
     if (judgeContent(goodsName, goodsUnit, price, number, id)) {
         $.post("/add", {
@@ -38,27 +38,19 @@ $("#goods-confirm").on("click",function() {
     }
 })
 
-var getImages = function(img1, img2, img3, img4, img5) {
+var getImages = function() {
+    var imgs = ["#imgShowOne","#imgShowTwo","#imgShowThree","#imgShowFour"];
     var images = "";
-    
-    if($(img1)[0].src !== "" && $(img1)[0].src !== "http://localhost:3001/images/img.jpg") {
-        images += $(img1)[0].src;
-        images += " ";
+
+    for(var i = 0; i < imgs.length; i ++) {
+        if($(imgs[i])[0].src !== "" && $(imgs[i])[0].src !== "http://localhost:3001/images/img.jpg") {
+            images += $(imgs[i])[0].src;
+            images += " ";
+        }
     }
-    if($(img2)[0].src !== "" && $(img2)[0].src !== "http://localhost:3001/images/img.jpg") {
-        images += $(img2)[0].src;
-        images += " ";
-    }
-    if($(img3)[0].src !== "" && $(img3)[0].src !== "http://localhost:3001/images/img.jpg") {
-        images += $(img3)[0].src;
-        images += " ";
-    }
-    if($(img4)[0].src !== "" && $(img4)[0].src !== "http://localhost:3001/images/img.jpg") {
-        images += $(img4)[0].src;
-        images += " ";
-    }
-    if($(img5)[0].src !== "" && $(img5)[0].src !== "http://localhost:3001/images/img.jpg") {
-        images += $(img5)[0].src;
+
+    if($("#imgShowFive")[0].src !== "" && $("#imgShowFive")[0].src !== "http://localhost:3001/images/img.jpg") {
+        images += $("#imgShowFive")[0].src;
     }
     return judgeImg(images);
 }
