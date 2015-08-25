@@ -7,16 +7,26 @@ router.get('/', function(req, res) {
     res.render('goods_query');
 });
 
-router.get('/query/:inputBarcode', function(req, res) {
-    // var inputBarcode = req.query.inputBarcode;
-    var inputBarcode = req.params.inputBarcode;
+router.get('/:input', function(req, res) {
+    var input = req.params.input;
+    var urlParameter = input.split('&');
+    var name = urlParameter[0];
+    var barcode = urlParameter[1];
+    var priceDown = parseInt(urlParameter[2]);
+    var priceUp = parseInt(urlParameter[3]);
     var queryResult = [];
     var status;
     var message;
     Goods.findAll({
             where: {
-                barcode: {
-                    $like: inputBarcode + '%'
+                //barcode: {
+                //    $like: barcode + '%'
+                //},
+                //name : {
+                //    $like : '%'+name
+                //},
+                price : {
+                    $between : [priceDown, priceUp]
                 }
             }
         }).then(function(data) {
@@ -37,9 +47,6 @@ router.get('/query/:inputBarcode', function(req, res) {
                     data: queryResult,
                     message: message
                 })
-                //res.render('goods_query',{
-                //    queryResult : queryResult
-                //})
         })
 })
 

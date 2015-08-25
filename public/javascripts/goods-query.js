@@ -20,9 +20,13 @@ $(function() {
     }
 
     $('#goods-query').on('click', function(e) {
-        var inputBarcode = $('#goods-id').prop('value');
+        var barcode = $('#goods-id').prop('value');
+        var name = $('#goods-name').prop('value');
+        var priceDown = $('#goods-price-down').prop('value');
+        var priceUp = $('#goods-price-up').prop('value');
+
         $.ajax({
-            url: 'goods_query/query/' + inputBarcode,
+            url: 'goods_query/' + name + '&' + barcode + '&' + priceDown + '&' + priceUp,
             type: 'get',
             success: function(result) {
                 if (result.message === 'ok') {
