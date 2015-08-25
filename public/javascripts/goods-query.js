@@ -10,7 +10,7 @@ $(function() {
 
     function executeJudge(selector, tipText) {
         $(selector).popover({
-            title: "皇上",
+            title: "管理员",
             content: tipText
         });
         $(selector).popover('show');
