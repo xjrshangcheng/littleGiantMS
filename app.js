@@ -1,6 +1,7 @@
 var mysql = require('mysql');
 var express = require('express');
 var app = express();
+var session = require('express-session');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser')
     , fs = require('fs')
@@ -34,6 +35,16 @@ app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), function(req, res
         res.redirect('/ueditor/nodejs/config.json');
     }
 }));
+
+// app.use(session());
+// app.use(function (req, res, next) {
+//     var url = req.originalUrl;
+//
+//     if (url != "/login") {
+//         return res.redirect("/login");
+//     }
+//     next();
+// });
 
 app.post('/upload', multipart(), function(req, res){
   var filename = req.files.files.size + req.files.files.originalFilename || path.basename(req.files.files.ws.path);
