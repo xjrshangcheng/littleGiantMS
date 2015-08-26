@@ -56,9 +56,6 @@ app.post('/upload', multipart(), function(req, res){
 var login = require('./routes/login');
 app.use('/login',login);
 
-var promotionType = require('./routes/promotion-type');
-app.use('/promotion-type',promotionType);
-
 var goodsPromotionManage = require('./routes/goods-promotion-manage');
 app.use('/goods-promotion-manage',goodsPromotionManage);
 
