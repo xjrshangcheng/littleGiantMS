@@ -1,0 +1,10 @@
+extends ./layout.jade
+
+block append head
+    link(rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet" href="./stylesheets/goods-promotion-manage.css")
+block content
+    include goods-promotion-manage.html
+block scripts
+    script(src="./jquery/dist/jquery.min.js")
+    script(src="./javascripts/goods-promotion-manage.js")
