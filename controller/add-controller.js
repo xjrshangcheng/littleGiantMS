@@ -38,4 +38,8 @@ addController.prototype.add_goods = function(req, res) {
         res.send(headers)
     })
 }
+
+addController.prototype.renderAddPage = function(req, res) {
+    res.render('add');
+}
 module.exports = addController;

@@ -3,9 +3,7 @@ var router = express.Router();
 var addController = require('../controller/add-controller');
 var add = new addController();
 
-router.get('/', function(req, res) {
-    res.render('add');
-});
+router.get('/', add.renderAddPage);
 
 router.post('/', add.add_goods);
 
