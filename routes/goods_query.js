@@ -6,6 +6,6 @@ var goodsQuery = require('../controller/goods-query');
 var goodsQuery = new goodsQuery();
 router.get('/', goodsQuery.renderGoodsQuery);
 
-router.get('/:input', goodsQuery.queryGoods);
+router.get('/query', goodsQuery.queryGoods);
 
 module.exports = router;

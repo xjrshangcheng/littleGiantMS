@@ -12,13 +12,13 @@ block content
             .panel-body
                 #promotion-type-choose
                     | 促销方式 ：
-                    input(type='radio' id='radio-drop')
+                    input(type='radio' id='radio-drop' name='promotion-type')
                     label(class='radio-inline' for='radio-drop') 直降
-                    input(type='radio' id='radio-discount')
+                    input(type='radio' id='radio-discount' name='promotion-type')
                     label(class='radio-inline' for='radio-discount') 折扣
-                    input(type='radio' id='radio-send')
+                    input(type='radio' id='radio-send' name='promotion-type')
                     label(class='radio-inline' for='radio-send') 满减
-                    input(type='radio' id='radio-subtract')
+                    input(type='radio' id='radio-subtract' name='promotion-type')
                     label(class='radio-inline' for='radio-subtract') 满送
                 .form-inline#describe
                     | 直降 ： 在此规则下，商品在实际价格上，再减
@@ -43,8 +43,5 @@ block content
                             td
                                 a(href='#') [修改]
                                 a(href='#') [删除]
-
-
-
 
 block scripts

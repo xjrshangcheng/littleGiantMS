@@ -52,7 +52,7 @@ var add = require('./routes/add');
 app.use('/add',add);
 
 var goods_query = require('./routes/goods_query');
-app.use('/goods_query',goods_query);
+app.use('/goods',goods_query);
 
 var promotionType = require('./routes/promotion-type');
 app.use('/promotionType',promotionType);

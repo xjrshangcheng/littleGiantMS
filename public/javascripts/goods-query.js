@@ -24,9 +24,15 @@ $(function() {
         var name = $('#goods-name').prop('value');
         var priceDown = $('#goods-price-down').prop('value');
         var priceUp = $('#goods-price-up').prop('value');
-
+        var data = {
+            barcode: barcode,
+            name: name,
+            priceDown: priceDown,
+            priceUp: priceUp
+        };
         $.ajax({
-            url: 'goods_query/' + name + '&' + barcode + '&' + priceDown + '&' + priceUp,
+            url: "goods/query",
+            data: data,
             type: 'get',
             success: function(result) {
                 if (result.message === 'ok') {
@@ -34,7 +40,7 @@ $(function() {
                     result.data.forEach(function(item) {
                         $('<tr><td>' + item.name + '</td><td>' + item.price + '</td><td>' + item.sales + '</td><td>' + item.inventory + '</td><td>' + item.type + '</td><td>' + item.status + '</td><td><a class="btn btn-default" id="itemDel" href="#" role="button">删除</a><a class="btn btn-default" id="itemModify" href="#" role="button">修改</a></td></tr>').appendTo($('.query-result'));
                     })
-                }else{
+                } else {
                     $('.query-result').empty();
                     $('<tr><td colspan="7">' + '查无此商品' + '</td></tr>').appendTo($('.query-result'));
                 }
