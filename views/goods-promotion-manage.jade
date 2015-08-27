@@ -4,7 +4,160 @@ block append head
     link(rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css")
     link(rel="stylesheet" href="./stylesheets/goods-promotion-manage.css")
 block content
-    include goods-promotion-manage.html
+    //include goods-promotion-manage.html
+    .container
+        .category-promotion
+            .goods-class
+                | 类商品促销
+            .category1
+                input(type="checkbox")
+                a(href="") 所有商品
+                .category2
+                    input(type="checkbox")
+                    a(href="") 图书
+                    .category3
+                        input(type="checkbox")
+                        | 电子图书
+                        br
+                        input(type="checkbox")
+                        | 工具书
+                        br
+                        input(type="checkbox")
+                    input(type="checkbox")
+                    a(href="") 电子产品
+                    .category3
+                        input(type="checkbox")
+                        | 手机
+                        br
+                        input(type="checkbox")
+                        | 电脑
+                        br
+                        input(type="checkbox")
+                        | 平板
+                        br
+                    input(type="checkbox")
+                    a(href="") 服饰
+                    .category3
+                        input(type="checkbox")
+                        | 男装
+                        br
+                        input(type="checkbox")
+                        | 女装
+                        br
+            .promotion-type
+                table(class="table table-bordered")
+                    tr
+                        td
+                            label(class="checkbox-inline")
+                                input(type="checkbox" value="option1")
+                                | 直降
+                            select(class="btn btn-default" name="price-fall")
+                                option(value="0") 10元
+                                option(value="1") 20元
+                                option(value="2") 30元
+                                option(value="3") 40元
+                        td
+                            label(class="checkbox-inline")
+                                input(type="checkbox" value="option1")
+                                | 打折
+                            select(class="btn btn-default" name="price-fall")
+                                option(value="0") 9折
+                                option(value="1") 8折
+                                option(value="2") 7折
+                                option(value="3") 6折
+                            br
+                    tr
+                        td
+                            label(class="checkbox-inline")
+                                input(type="checkbox" value="option1")
+                                | 满减
+                            select(class="btn btn-default" name="price-fall")
+                                option(value="0") 满100减10元
+                                option(value="1") 满200减30元
+                        td
+                            label(class="checkbox-inline")
+                                input(type="checkbox" value="option1")
+                                | 满送
+                            select(class="btn btn-default" name="price-fall")
+                                option(value="0") 买2赠1
+                                option(value="1") 买3赠1
+                                option(value="2") 买4赠1
+                                option(value="3") 买5赠1
+            .goods-promotion-determine
+                input(class="btn btn-default" type="submit" value="确定")
+        .goods-promotion
+            .goods
+                | 商品促销
+            br
+            .goods-query
+                | ID
+                input(type="text")
+                input(class="btn btn-default" type="button" value="查看")
+            br
+            .goods-details
+                table(class="table table-bordered")
+                    tr
+                        td id
+                        td
+                            input(type="text")
+                        td name
+                        td
+                            input(type="text")
+                    tr
+                        td 图片
+                        td
+                            .img
+                        td 价格
+                        td
+                            input(type="text")
+                    tr
+                        td 类型
+                        td
+                            input(type="text")
+                        td 库存
+                        td
+                            input(type="text")
+            .promotion-type
+                table(class="table table-bordered")
+                    tr
+                        td
+                            label(class="checkbox-inline")
+                                input(type="checkbox" value="option1")
+                                | 直降
+                            select(class="btn btn-default" name="price-fall")
+                                option(value="0") 10元
+                                option(value="1") 20元
+                                option(value="2") 30元
+                                option(value="3") 40元
+                        td
+                            label(class="checkbox-inline")
+                                input(type="checkbox" value="option1")
+                                | 打折
+                            select(class="btn btn-default" name="price-fall")
+                                option(value="0") 9折
+                                option(value="1") 8折
+                                option(value="2") 7折
+                                option(value="3") 6折
+                            br
+                    tr
+                        td
+                            label(class="checkbox-inline")
+                                input(type="checkbox" value="option1")
+                                | 满减
+                            select(class="btn btn-default" name="price-fall")
+                                option(value="0") 满100减10元
+                                option(value="1") 满200减30元
+                        td
+                            label(class="checkbox-inline")
+                                input(type="checkbox" value="option1")
+                                | 满送
+                            select(class="btn btn-default" name="price-fall")
+                                option(value="0") 买2赠1
+                                option(value="1") 买3赠1
+                                option(value="2") 买4赠1
+                                option(value="3") 买5赠1
+            .goods-promotion-determine
+                input(class="btn btn-default" type="submit" value="确定")
 block scripts
     script(src="./jquery/dist/jquery.min.js")
     script(src="./javascripts/goods-promotion-manage.js")
