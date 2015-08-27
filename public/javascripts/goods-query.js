@@ -42,4 +42,31 @@ $(function() {
         })
     });
 
+    $("#goods-price-down").on("keydown", function(evt) {
+        var ASCIININE = 57;
+        var ASCIIZERO = 48;
+        var ASCIIBACKSPACE = 8;
+        var ASCIIPIONT = 46;
+        var ASCIITAB = 9;
+        var ASCIIPRECENT = 37;
+        var ASCIIUPPIONT = 39;
+
+        if (!(evt.keyCode <= ASCIININE && evt.keyCode >= ASCIIZERO || evt.keyCode === ASCIIBACKSPACE || evt.keyCode === ASCIIPIONT || evt.keyCode === ASCIITAB || evt.keyCode === ASCIIPRECENT || evt.keyCode === ASCIIUPPIONT)) {
+            evt.preventDefault();
+        }
+    });
+
+    $("#goods-price-up").on("keydown", function(evt) {
+        var ASCIININE = 57;
+        var ASCIIZERO = 48;
+        var ASCIIBACKSPACE = 8;
+        var ASCIIPIONT = 46;
+        var ASCIITAB = 9;
+        var ASCIIPRECENT = 37;
+        var ASCIIUPPIONT = 39;
+
+        if (!(evt.keyCode <= ASCIININE && evt.keyCode >= ASCIIZERO || evt.keyCode === ASCIIBACKSPACE || evt.keyCode === ASCIIPIONT || evt.keyCode === ASCIITAB || evt.keyCode === ASCIIPRECENT || evt.keyCode === ASCIIUPPIONT)) {
+            evt.preventDefault();
+        }
+    });
 })
