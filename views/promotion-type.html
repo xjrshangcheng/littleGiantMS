@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id="promotion-type"  class="panel panel-default">
+            <div class="panel-heading">促销规则</div>
+            <div class="panel-body">
+                <div id="promotion-type-choose">
+                    促销方式：  <input type="radio" id="radio-drop" value="" />
+                    <label class="radio-inline" for="radio-drop">直降</label>
+                    <input type="radio" id="radio-discount" value="" />
+                    <label class="radio-inline" for="radio-discount">折扣</label>
+                    <input type="radio" id="radio-send" value="" />
+                    <label class="radio-inline" for="radio-send">满送</label>
+                    <input type="radio" id="radio-subtract" value="" />
+                    <label class="radio-inline" for="radio-subtract">满减</label>
+                </div>
+
+                <div class="form-inline" id="describe">
+                    直降：在此规则下，商品在实际价格上，再减<input type="text"  class="form-control" >元进行销售。
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary btn-lg">新增</button>
+                </div>
+            </div>
+            </div>
+
+
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">详细信息</div>
+            <div class="panel-body">
+                <table class="table table-striped table-hover table-bordered ">
+                    <thead>
+                        <tr>
+                            <td>
+                                促销方式
+                            </td>
+                            <td>
+                                规则规则
+                            </td>
+                            <td>
+                                操作
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        <tr>
+                            <td>
+                                直降
+                            </td>
+                            <td>
+                                直降10元
+                            </td>
+                            <td>
+                                <a>[修改]</a>
+                                <a>[删除]</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

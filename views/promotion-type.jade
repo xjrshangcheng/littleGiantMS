@@ -1,0 +1,50 @@
+extends ./layout.jade
+block append head
+    link(rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet" href="./stylesheets/promotion-type.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+block content
+    //include promotion-type.html
+    .container
+        #promotion-type.panel.panel-default
+            .panel-heading
+                | 促销规则
+            .panel-body
+                #promotion-type-choose
+                    | 促销方式 ：
+                    input(type='radio' id='radio-drop')
+                    label(class='radio-inline' for='radio-drop') 直降
+                    input(type='radio' id='radio-discount')
+                    label(class='radio-inline' for='radio-discount') 折扣
+                    input(type='radio' id='radio-send')
+                    label(class='radio-inline' for='radio-send') 满减
+                    input(type='radio' id='radio-subtract')
+                    label(class='radio-inline' for='radio-subtract') 满送
+                .form-inline#describe
+                    | 直降 ： 在此规则下，商品在实际价格上，再减
+                    input(type='text' class='form-control')
+                    | 元进行销售。
+                button(type='button' class='btn btn-primary btn-lg')
+                    | 新增
+        .panel.panel-default
+            .panel-heading
+                | 详细信息
+            .panel-body
+                table.table.table-striped.table-hover.table-bordered
+                    thead
+                        tr
+                            td 促销方式
+                            td 促销规则
+                            td 操作
+                    tbody
+                        tr
+                            td 直降
+                            td 直降10元
+                            td
+                                a(href='#') [修改]
+                                a(href='#') [删除]
+
+
+
+
+block scripts

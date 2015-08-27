@@ -65,6 +65,9 @@ app.use('/add',add);
 var goods_query = require('./routes/goods_query');
 app.use('/goods_query',goods_query);
 
+var promotionType = require('./routes/promotion-type');
+app.use('/promotionType',promotionType);
+
 var server = app.listen(3001, function() {
 
     var host = server.address().address;
