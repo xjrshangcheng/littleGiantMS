@@ -8,9 +8,9 @@ router.get('/', function(req, res) {
 router.post('/',function(req,res) {
     var result;
     var status;
-
     var userName = req.body.inputName;
     var inputPwd = req.body.inputPwd;
+
     if(userName === 'admin' && inputPwd === 'admin') {
         result = 'ok';
         status = 200;
