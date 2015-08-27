@@ -1,11 +1,30 @@
-$(function () {
-    $('.category1>input').on('click', function() {
+$(function() {
+    $('.category1 input').on('click', function() {
         var checked = $(this).prop('checked');
-        $('.category2 input').prop('checked', checked);
-    });
+        var id = $(this).data('id');
+        $('div[data-id=' + id + '] input').prop('checked', checked);
+    })
+    $('.category1 input').on('click', function() {
+        var parentId = $(this).parent().data('id');
+        var checked = $('div[data-id=' + parentId + '] input:checked').length === $('div[data-id=' + parentId + '] input').length;
+        $('input[data-id=' + parentId + ']').prop('checked', checked);
+        parentId = $('input[data-id=' + parentId + ']').parent().data('id');
+        checked = $('div[data-id=' + parentId + '] input:checked').length === $('div[data-id=' + parentId + '] input').length;
+        $('input[data-id=' + parentId + ']').prop('checked', checked);
+    })
+})
 
-    $('.category2 input').on('click', function() {
-        var allChecked = $(".category2 input:checked").length === $('.category2 input').length;
-        $(".category1>input").prop("checked", allChecked);
-    });
+$(function () {
+    $('.category1 a').on('click', function () {
+        var t = $(this).data('t')
+        t *= -1;
+        $(this).data('t', t)
+        console.log(t)
+        var id = $(this).data('id');
+        if (t===-1) {
+            $('div[data-id=' + id + ']').addClass('category')
+        } else {
+            $('div[data-id=' + id + ']').removeClass('category')
+        }
+    })
 })

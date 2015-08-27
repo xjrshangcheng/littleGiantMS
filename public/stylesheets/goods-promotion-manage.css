@@ -10,6 +10,12 @@
 .category1,.category2,.category3 {
     padding-left: 20px;
 }
+.category {
+    display:none;
+}
+a.btn {
+    padding: 3px 6px;
+}
 .category-promotion,.goods-promotion {
     width: 800px;
     margin: 0 auto;

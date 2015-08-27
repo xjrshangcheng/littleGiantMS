@@ -4,18 +4,18 @@ block append head
     link(rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css")
     link(rel="stylesheet" href="./stylesheets/goods-promotion-manage.css")
 block content
-    //include goods-promotion-manage.html
     .container
         .category-promotion
             .goods-class
                 | 类商品促销
             .category1
-                input(type="checkbox")
-                a(href="") 所有商品
-                .category2
-                    input(type="checkbox")
-                    a(href="") 图书
-                    .category3
+                input(type="checkbox" data-id="0")
+                a(class='btn' data-id="0" data-t="1") 所有商品
+                .category2(data-id="0")
+                    input(type="checkbox" data-id="1")
+                    a(class='btn' data-id="1" data-t="1") 图书
+                    br
+                    .category3(data-id="1")
                         input(type="checkbox")
                         | 电子图书
                         br
@@ -23,9 +23,11 @@ block content
                         | 工具书
                         br
                         input(type="checkbox")
-                    input(type="checkbox")
-                    a(href="") 电子产品
-                    .category3
+
+                    input(type="checkbox" data-id="2")
+                    a(class='btn' data-id="2" data-t="1") 电子产品
+                    br
+                    .category3(data-id="2")
                         input(type="checkbox")
                         | 手机
                         br
@@ -34,16 +36,17 @@ block content
                         br
                         input(type="checkbox")
                         | 平板
-                        br
-                    input(type="checkbox")
-                    a(href="") 服饰
-                    .category3
+
+                    input(type="checkbox" data-id="3")
+                    a(class='btn' data-id="3" data-t="1") 服饰
+                    br
+                    .category3(data-id="3")
                         input(type="checkbox")
                         | 男装
                         br
                         input(type="checkbox")
                         | 女装
-                        br
+
             .promotion-type
                 table(class="table table-bordered")
                     tr
