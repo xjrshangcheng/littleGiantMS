@@ -1,14 +1,20 @@
 var express = require('express');
 var router = express.Router();
 var models = require('../models');
-//var Goods = models.goods;
-//var goodsQuery = require('../controller/goods-query');
-//var goodsQuery = new goodsQuery();
-//router.get('/', goodsQuery.renderGoodsQuery);
-//
-//router.get('/:input', goodsQuery.queryGoods);
+var Promotion = models.promotion;
+
 router.get('/',function(req, res) {
-    res.render('promotion-type');
+    Promotion.findPromotion().then(function(data) {
+        return data.map(function(val) {
+            return val.dataValues;
+        })
+    })
+    .then(function(data) {
+        console.log(data);
+        res.render('promotion-type',{
+            data : data
+        })
+    })
 })
 
 module.exports = router;

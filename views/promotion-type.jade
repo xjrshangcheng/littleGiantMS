@@ -4,7 +4,6 @@ block append head
     link(rel="stylesheet" href="./stylesheets/promotion-type.css")
     meta(name="viewport" content="width=device-width, initial-scale=1")
 block content
-    //include promotion-type.html
     .container
         #promotion-type.panel.panel-default
             .panel-heading
@@ -12,19 +11,18 @@ block content
             .panel-body
                 #promotion-type-choose
                     | 促销方式 ：
-                    input(type='radio' id='radio-drop' name='promotion-type')
-                    label(class='radio-inline' for='radio-drop') 直降
-                    input(type='radio' id='radio-discount' name='promotion-type')
-                    label(class='radio-inline' for='radio-discount') 折扣
-                    input(type='radio' id='radio-send' name='promotion-type')
-                    label(class='radio-inline' for='radio-send') 满减
-                    input(type='radio' id='radio-subtract' name='promotion-type')
-                    label(class='radio-inline' for='radio-subtract') 满送
+                    - var hash = {};
+                    -for (var i = 0;i < data.length; i++) {
+                        if !hash[data[i].type]
+                            input(type='radio' id='radio-drop' name='promotion-type')
+                            label(class='radio-inline' for='radio-drop') #{data[i].type}
+                            - hash[data[i].type]=true;
+                    -}
                 .form-inline#describe
                     | 直降 ： 在此规则下，商品在实际价格上，再减
                     input(type='text' class='form-control')
                     | 元进行销售。
-                button(type='button' class='btn btn-primary btn-lg')
+                button(type='button' id='add-button' class='btn btn-primary btn-lg')
                     | 新增
         .panel.panel-default
             .panel-heading
@@ -38,12 +36,15 @@ block content
                             td 状态
                             td 操作
                     tbody
-                        tr
-                            td 直降
-                            td 直降10元
-                            td 开启
-                            td
-                                a(href='#') [修改]
-                                a(href='#') [删除]
+                        - for (var i = 0; i < data.length; i++){
+                            tr
+                                td= data[i].type
+                                td= data[i].rule
+                                td= data[i].status
+                                td
+                                    a(href='#') [修改]
+                                    a(href='#') [删除]
+                        -}
 
-block scripts
+block append scripts
+    script(type="text/javascript" src="./javascripts/promotion-type.js")
