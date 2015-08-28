@@ -9,44 +9,31 @@ block content
             .goods-class
                 | 类商品促销
             .category1
-                input(type="checkbox" data-id="0")
-                a(class='btn' data-id="0" data-t="1") 所有商品
-                .category2(data-id="0")
-                    input(type="checkbox" data-id="1")
-                    a(class='btn' data-id="1" data-t="1") 图书
-                    br
-                    .category3(data-id="1")
-                        input(type="checkbox")
-                        | 电子图书
+                for category in data
+                    if (category.level===-1)
+                        input(type="checkbox" data-id="#{category.level}")
+                        a(class='btn' data-id="#{category.level}" data-t="1") #{category.name}
                         br
-                        input(type="checkbox")
-                        | 工具书
-                        br
-                        input(type="checkbox")
-
-                    input(type="checkbox" data-id="2")
-                    a(class='btn' data-id="2" data-t="1") 电子产品
-                    br
-                    .category3(data-id="2")
-                        input(type="checkbox")
-                        | 手机
-                        br
-                        input(type="checkbox")
-                        | 电脑
-                        br
-                        input(type="checkbox")
-                        | 平板
-
-                    input(type="checkbox" data-id="3")
-                    a(class='btn' data-id="3" data-t="1") 服饰
-                    br
-                    .category3(data-id="3")
-                        input(type="checkbox")
-                        | 男装
-                        br
-                        input(type="checkbox")
-                        | 女装
-
+                        .category2(data-id="#{category.level}")
+                            for category in data
+                                if(category.level===0)
+                                    input(type="checkbox" data-id="#{category.id}")
+                                    a(class='btn' data-id="#{category.id}" data-t="-1") #{category.name}
+                                    br
+                                    .category3(data-id="#{category.id}")
+                                        - var path = category.path;
+                                        for category in data
+                                            - var path2 = category.path.split('.')
+                                            if(category.level===1&&path===path2[0])
+                                                input(type="checkbox" data-id="#{category.id}")
+                                                a(class='btn' data-id="#{category.id}" data-t="-1") #{category.name}
+                                                br
+                                                .category4(data-id="#{category.id}")
+                                                    for category in data
+                                                        - var path3 = category.path.split('.')
+                                                        if(category.level===2&&path2[1]===path3[1])
+                                                            input(type="checkbox" data-id="#{category.id}")
+                                                            | #{category.name}
             .promotion-type
                 table(class="table table-bordered")
                     tr

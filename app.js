@@ -46,7 +46,7 @@ var login = require('./routes/login');
 app.use('/login',login);
 
 var goodsPromotionManage = require('./routes/goods-promotion-manage');
-app.use('/goods-promotion-manage',goodsPromotionManage);
+app.use('/goods_promotion_manage',goodsPromotionManage);
 
 var add = require('./routes/add');
 app.use('/add',add);

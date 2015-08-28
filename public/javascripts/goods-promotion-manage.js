@@ -11,15 +11,19 @@ $(function() {
         parentId = $('input[data-id=' + parentId + ']').parent().data('id');
         checked = $('div[data-id=' + parentId + '] input:checked').length === $('div[data-id=' + parentId + '] input').length;
         $('input[data-id=' + parentId + ']').prop('checked', checked);
+        parentId = $('input[data-id=' + parentId + ']').parent().data('id');
+        checked = $('div[data-id=' + parentId + '] input:checked').length === $('div[data-id=' + parentId + '] input').length;
+        $('input[data-id=' + parentId + ']').prop('checked', checked);
     })
-})
+});
 
 $(function () {
+    $('.category3 .category4').addClass('category')
+    $('.category3').addClass('category')
     $('.category1 a').on('click', function () {
-        var t = $(this).data('t')
+        var t = $(this).data('t');
         t *= -1;
-        $(this).data('t', t)
-        console.log(t)
+        $(this).data('t', t);
         var id = $(this).data('id');
         if (t===-1) {
             $('div[data-id=' + id + ']').addClass('category')
@@ -27,4 +31,4 @@ $(function () {
             $('div[data-id=' + id + ']').removeClass('category')
         }
     })
-})
+});
