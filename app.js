@@ -51,7 +51,7 @@ app.use('/goods-promotion-manage',goodsPromotionManage);
 var add = require('./routes/add');
 app.use('/add',add);
 
-var goods_query = require('./routes/goods_query');
+var goods_query = require('./routes/goods');
 app.use('/goods',goods_query);
 
 var promotionType = require('./routes/promotion-type');

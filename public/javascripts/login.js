@@ -25,7 +25,7 @@ function check() {
         },
         success: function(result) {
             if (result.data === 'ok') {
-                $(location).attr('href', '/goods_query');
+                $(location).attr('href', '/goods');
             }
         }
     })

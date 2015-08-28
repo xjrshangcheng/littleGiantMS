@@ -33,6 +33,6 @@ goodsQuery.prototype.queryGoods = function(req, res) {
 }
 
 goodsQuery.prototype.renderGoodsQuery = function(req, res) {
-    res.render('goods_query');
+    res.render('goods');
 }
 module.exports = goodsQuery;
